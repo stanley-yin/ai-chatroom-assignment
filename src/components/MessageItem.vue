@@ -56,8 +56,11 @@ const simulateBotResponse = async () => {
 
 watch(displayText, () => {
   nextTick(() => {
-    if (props.scrollTarget) {
-      props.scrollTarget.scrollTop = props.scrollTarget.scrollHeight
+    const el = props.scrollTarget
+    if (!el) return
+    const isNearBottom = el.scrollHeight - el.scrollTop - el.clientHeight < 80
+    if (isNearBottom) {
+      el.scrollTop = el.scrollHeight
     }
   })
 })
