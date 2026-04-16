@@ -3,6 +3,19 @@ p {
   margin: 0;
 }
 
+.markdown-body a {
+  color: $orange-500;
+}
+
+.markdown-body ol {
+  padding-left: 16px;
+}
+
+.markdown-body ul {
+  padding-left: 16px;
+  margin-bottom: 16px;
+}
+
 $color-properties: (
   bg: "background-color",
   text: "color",
