@@ -100,7 +100,6 @@ const onSubmit = (text) => {
 <style scoped lang="scss">
 .chatbox {
   width: 780px;
-  height: 590px;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
@@ -109,6 +108,7 @@ const onSubmit = (text) => {
 }
 
 .content {
+  height: 420px;
   position: relative;
   flex-grow: 1;
   background: #ffffff;

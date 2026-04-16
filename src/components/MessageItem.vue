@@ -85,6 +85,9 @@ onUnmounted(() => {
 
 <template>
   <div class="message-container" :class="{ 'is-me': isMe }">
+    <div v-if="!isMe" class="avatar">
+      <img src="/logo.svg" alt="Nitra AI" />
+    </div>
     <div v-if="isThinking" class="thinking-state">
       Thinking
       <span class="dot-animation">...</span>
@@ -97,12 +100,34 @@ onUnmounted(() => {
 <style scoped lang="scss">
 .message-container {
   display: flex;
+  align-items: flex-start;
   justify-content: flex-start;
+  gap: 8px;
   margin-bottom: 10px;
 }
 
 .message-container.is-me {
   justify-content: flex-end;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: $teal-700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  box-sizing: border-box;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+  }
 }
 
 .bubble {
