@@ -20,7 +20,9 @@ defineProps({
   border: none;
   border-radius: 999px;
   background-color: $orange-400;
-  box-shadow: 0px 4px 6px -4px #0000001A;
+  box-shadow:
+    0 4px 6px -4px rgba(0, 0, 0, 0.1),
+    0 10px 15px -3px rgba(0, 0, 0, 0.1);
   color: white;
   font-weight: 600;
   font-size: 14px;
