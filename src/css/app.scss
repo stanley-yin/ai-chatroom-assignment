@@ -1,4 +1,8 @@
 // app global css in SCSS form
+p {
+  margin: 0;
+}
+
 $color-properties: (
   bg: "background-color",
   text: "color",

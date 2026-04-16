@@ -105,12 +105,13 @@ onUnmounted(() => {
 .bubble {
   max-width: 80%;
   padding: 10px;
-  border-radius: 12px 12px 0 12px;
+  border-radius: 0 10px 10px 10px;
   background-color: $gray-100;
 }
 
 .is-me .bubble {
   background-color: $blue-100;
+  border-radius:  10px 0 10px 10px;
 }
 
 .dot-animation {
